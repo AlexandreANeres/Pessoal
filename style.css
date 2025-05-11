@@ -97,7 +97,8 @@ a:hover {
 .pdf-container {
     width: 100%;
     max-width: 500px;
-    margin: 20px auto; /* Centraliza o botão */
+    margin: 20px auto;
+    /* Centraliza o botão */
     text-align: center;
 }
 
@@ -129,8 +130,10 @@ a:hover {
 }
 
 .pdf-player:hover {
-    transform: scale(1.01); /* Leve aumento no tamanho ao passar o mouse */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+    transform: scale(1.01);
+    /* Leve aumento no tamanho ao passar o mouse */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    /* Sombra mais intensa */
 
     background: linear-gradient(45deg, #ff4500, #ff8c00, #306fb8, #07121f);
     background-size: 300% 300%;
@@ -164,13 +167,23 @@ a:hover {
     color: #2e2e2e;
 }
 
-#giant_title {
-  font-family: "Rubik Mono One", monospace;
-  font-weight: 400;
-  font-style: normal;
-  color: #BFBFBF;
+#title3 {
+    max-width: 80%;
+    font-family: "Roboto Mono", monospace;
+    font-size: 3vh;
+    font-weight: 700;
+    margin: 0px;
+    /* - margens */
+    color: #BFBFBF;
+}
 
-  font-size: 15vh;
+#giant_title {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #BFBFBF;
+
+    font-size: 15vh;
 }
 
 #title_fire {
@@ -197,6 +210,7 @@ a:hover {
 }
 
 #title_fire_dark {
+    max-width: 80%;
     font-family: "Roboto Mono", monospace;
     font-size: xx-large;
     font-weight: bold;
@@ -227,14 +241,16 @@ a:hover {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; /* Certifique-se de que o vídeo está atrás do texto, mas acima de outros elementos */
+    z-index: -1;
+    /* Certifique-se de que o vídeo está atrás do texto, mas acima de outros elementos */
 }
 
 /* Estilo para o vídeo de fundo */
 .background-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que o vídeo cubra todo o espaço */
+    object-fit: cover;
+    /* Garante que o vídeo cubra todo o espaço */
 }
 
 #title_sonoplastia {
@@ -579,8 +595,10 @@ body {
 }
 
 .container_dark {
-    position: relative; /* Necessário para posicionar o vídeo corretamente */
-    background-color: #080808; /* Certifique-se de que o fundo não está cobrindo o vídeo */
+    position: relative;
+    /* Necessário para posicionar o vídeo corretamente */
+    background-color: #080808;
+    /* Certifique-se de que o fundo não está cobrindo o vídeo */
     width: 102%;
     height: 900px;
     text-align: center;
@@ -588,8 +606,10 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    overflow: visible; /* Garante que o vídeo não seja cortado */
-    z-index: 0; /* Certifique-se de que o container não cobre o vídeo */
+    overflow: visible;
+    /* Garante que o vídeo não seja cortado */
+    z-index: 0;
+    /* Certifique-se de que o container não cobre o vídeo */
 }
 
 .container_divisoria_dark {
