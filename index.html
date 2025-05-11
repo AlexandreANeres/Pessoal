@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bytesized&family=Cal+Sans&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Dancing+Script:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    // Texto que se escreve
+
+    var words = ['Oi! Meu nome é Alexandre Neres!', 'Bem vindo ao meu Portfólio!'],
+        part,
+        i = 0,
+        offset = 0,
+        len = words.length,
+        forwards = true,
+        skip_count = 0,
+        skip_delay = 15,
+        speed = 70;
+
+    var wordflick = function () {
+        setInterval(function () {
+            if (forwards) {
+                if (offset >= words[i].length) {
+                    ++skip_count;
+                    if (skip_count == skip_delay) {
+                        forwards = false;
+                        skip_count = 0;
+                    }
+                }
+            } else {
+                if (offset == 0) {
+                    forwards = true;
+                    i++;
+                    offset = 0;
+                    if (i >= len) {
+                        i = 0;
+                    }
+                }
+            }
+            part = words[i].substr(0, offset);
+            if (skip_count == 0) {
+                if (forwards) {
+                    offset++;
+                } else {
+                    offset--;
+                }
+            }
+            $('.word').text(part);
+        }, speed);
+    };
+
+    $(document).ready(function () {
+        wordflick();
+    });
+
+    // Calcula o tempo de vida
+
+    function updateLifeTimer() {
+        const birthDate = new Date(2009, 2, 19); // Data de nascimento (19/03/2009)
+        const now = new Date();
+
+        let years = now.getFullYear() - birthDate.getFullYear();
+        let months = now.getMonth() - birthDate.getMonth();
+        let days = now.getDate() - birthDate.getDate();
+
+        // Ajusta os valores se necessário
+        if (days < 0) {
+            months--;
+            const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+            days += previousMonth.getDate();
+        }
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        // Define os textos no singular ou plural
+        const yearText = years === 1 ? "ano" : "anos";
+        const monthText = months === 1 ? "mês" : "meses";
+        const dayText = days === 1 ? "dia" : "dias";
+
+        // Atualiza o conteúdo do elemento
+        document.getElementById("life-timer").textContent =
+            `Eu estou vivo há ${years} ${yearText}, ${months} ${monthText} e ${days} ${dayText}!`;
+    }
+
+    // Atualiza o timer a cada segundo
+    setInterval(updateLifeTimer, 1000);
+
+    /* Player de vídeo */
+
+    function togglePlayPause(video) {
+        if (video.paused) {
+            video.play(); // Dá play no vídeo
+        } else {
+            video.pause(); // Pausa o vídeo
+        }
+    }
+
+    // Pause de outros áudios quando um novo é iniciado
+
+    document.addEventListener("play", function (event) {
+        const mediaPlayers = document.querySelectorAll(".media-player");
+
+        mediaPlayers.forEach((player) => {
+            // Ignora o vídeo de fundo e o player que disparou o evento
+            if (player !== event.target && !player.paused && !event.target.classList.contains("background-video")) {
+                player.pause(); // Pausa todos os outros players que estão tocando
+            }
+        });
+    }, true);
+
+</script>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="content">
+            <div class="links">
+                <a href="curriculo.php" class="curriculo">Meu currículo</a>
+                <a href="https://github.com/AlexandreANeres" target="_blank">Sistema GitHub</a>
+                <a href="https://linktr.ee/AlexandreNeres" target="_blank">Linktree</a>
+                <a href="#sobremim">Sobre Mim</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <img class="geral" src="paisagem_montanhas.jpg" alt="Paisagem esplêndida">
+    </div>
+
+    <div class="container">
+        <p class="word"></p>
+        <p id="description">Nasci no dia 19 de março de 2009, ou seja:</p>
+        <p id="life-timer"></p> <!-- Timer do tempo de vida -->
+        <p id="description">Meu nome é Alexandre Neres, nasci em Foz do Iguaçu, Paraná, Brasil... E essa é a minha
+            página. <br><br> Eu não faço ideia de como você veio parar aqui, mas agradeço muito por estar e sugiro que
+            dê uma olhada (tem umas coisas bem legais aqui, vai que você encontra uma área de interesse ou alguma
+            informação minha que tu queira puxar). Essa página é tipo um storyboard mal feito, com o porém de que
+            significa muito pra mim. <br><br> Curto tudo o que envolve um terror bom, do tipo que envolve uns arrepios
+            reais e não qualquer sustinho, adoro latte, capuccino com canela ou qualquer café que não tenha gosto de
+            petróleo. Meu escritor favorito é Stephen King, meu livro favorito é 1984, meu jogo favorito é Outer Wilds.
+            Tenho uma start up em desenvolvimento no mercado de medicina neurológica com nome MigaCare. Na minha opinião
+            o melhor Call of Duty é o Black Ops 1 (O Reznov nunca foi real) e todo filme do Christopher Nolan, Quentin
+            Tarantino e Robert Eggers é 10/10.<br><br>No momento, o site não é responsivo para Mobile, e só fica
+            agradável para o tablet, e para displays (notebooks, monitores, televisões e etc) com resolução maior ou
+            igual a 1024x768! Elemento esse que vou aprimorar conforme me desenvolver na área <3 <br><br> Se quiser dar
+                uma olhada em outras páginas minhas, só clicar nos botões aí embaixo:</p>
+
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/alexandreneres09" target="_blank" class="btn">Instagram</a>
+            <a href="https://www.youtube.com/@AlexandreAndreNeres" target="_blank" class="btn">YouTube</a>
+            <a href="https://github.com/AlexandreANeres" target="_blank" class="btn">GitHub</a>
+            <a href="https://pay.kiwify.com.br/JlRtzpT" target="_blank" class="btn">E-books</a>
+            <a href="https://www.linkedin.com/in/alexandre-neres-b0b3b4258/" target="_blank" class="btn">LinkedIn</a>
+        </div>
+
+    </div>
+
+    <div class="container_divisorio">
+        <div class="double-container-one">
+            <p id="title">Sobre o portfólio e os projetos</p>
+            <p id="description">Esse espaço é onde eu aglomero todos os meus projetos! <br> <br> Tudo o que se encontra
+                nessa página faz parte não só do meu portfolio... Também faz parte da minha história. A página está em
+                ordem cronológica do desenvolvimento de cada um dos projetos, ou seja, conforme você desce você
+                acompanha a tragetória do meu desenvolvimento ano após ano :) <br> <br> Cada um deles significa muito
+                pra mim...  <br><br> Desde pequeno eu tenho um envolvimento muito forte com a arte, e desde que me descobri como
+                capaz de faze-la me esforcei ao máximo para torna-la a melhor versão possível. <br> <br> Me envolvi com
+                pintura, fotografia, cinematografia, coloração, edição, roteiro, poesia, contos, desing, modelagem 3D,
+                game-developing, artes-cênicas (teatro, projetos de improvisação e afins), web-development,
+                desenvolvimento de mundo, arte do ambiente (enviroment), audiovisual, teoria musical, composição e assim
+                segue. <br> <br> Boa sorte! ("E caso eu não te veja depois, bom dia, boa tarde e boa noite!" - O show de
+                Truman) </p>
+        </div>
+
+        <div class="double-container-two">
+            <img class="divisoria" src="janela_fotografia.jpg" alt="Fotografia de uma janela em preto e branco">
+        </div>
+    </div>
+
+    <div class="container">
+
+        <p id="title_fire">Uma das minhas músicas favoritas pode te acompanhar no começo dessa jornada!</p>
+
+        <video class="media-player" onclick="togglePlayPause(this)">
+            <source src="./travelers.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+
+    </div>
+
+    <div class="container_divisoria"></div>
+
+    <div class="container_dinamico">
+        <p id="giant_title">O Diário de Elizabeth (2022) </p>
+    </div>
+
+    <div class="container_divisoria"></div>
+
+    <div class="container">
+        <p id="title_fire">Comecei a escrever por causa de um professor.</p>
+        <p id="title2">Não sei se é uma boa ideia colocar o nome do sujeito aqui, então pode chamar ele de Micael... Antes eu era o tipo de pessoa que andava com o cabelo na cara, era muito mais reservado, afastado e vivia com um livro na mão. Um dia, no monótomo que era o cotidiano, sendo o último sujetio a sair da sala para o intervalo um professor barrou a minha saída, me perguntou que livro eu estava lendo. <br><br> E o que antes havia começado com uma curiosidade, logo se tornou um mentor. O professor comentou que achava interesse no que eu escrevia e nas obras que eu lia, e incentivou um desenvolvimento de forma bem característica (uns toques no ombro e uma ou outra palavra bonita), e eu segui o conselho.  </p>
+    </div>
+
+    <div class="container">
+        <p id="title_fire">E na primeira oportunidade que tive de provar que havia seguido, fiz.</p>
+        <p id="title2">O professor pediu a entrega de um trabalho com 2 dias de prazo. O trabalho tinha fundamento em algum texto trouxo sobre um primo que matou um pássaro e queimou as bonecas das primas por mal caráter ou algo do gênero (A lembrança é bem vaga). <br><br> A proposta do trabalho era criar uma ramificação da história com interpretações próprias, e eu decidi que criaria a minha primeira história de fantasia... Cujo nome era:</p>
+        <p id="title_fire">O diário de Elizabeth</p>
+    </div>
+
+    <div class="container">
+        <p id="title2"> <br><br> Por mais que a escrita seja bem básica e infantil, foi um marco na minha vida. Marco esse que está registrado em um pendrive antigo a muito tempo... Decidi que registraria ele em outro lugar mais adequado.</p>
+
+        <div class="pdf-container">
+            <a href="./o_diario_de_elizabeth.pdf" download class="pdf-player">
+            </a>
+        </div>
+
+        <p id="title_fire">É só clicar e baixar.</p>
+    </div>
+
+    <div class="container_divisoria"></div>
+
+    <div class="container_t"></div>
+
+    <div class="container_dinamico">
+        <p id="giant_title">Outros trabalhos </p>
+    </div>
+
+    <div class="container_td"></div>
+
+    <div class="container">
+        <p id="title_fire">Boa parte das coisas que eu escrevi eu perdi por descuido.</p>
+        <p id="title2">Eu cheguei a escrever 12 histórias desse período até o trabalho do próximo tópico. Uma sobre o texto: O homem que perdeu a orelha, outra sobre um náufrago, outra sobre um andar misterioso em uma casa, outra sobre uma bruxa em um povoado africano, outra sobre um pastor que lavava dinheiro com a igreja, outra sobre mim e... Todas perdidas. <br><br> É claro que essas histórias fazem falta, mas a experiência que cada uma me proporcionou nunca vão ficar de lado. O próximo trabalho que produzi usou uma dessas histórias como enredo. Até hoje é um dos trabalhos que mais me orgulha, considerando que era a primeira vez que eu fazia coisas do gênero</p>
+    </div>
+
+    <div class="container_divisoria"></div>
+
+    <div class="container">
+
+        <p id="title_fire_dark">Toca essa outra aqui... Pro clima ficar adequadamente pesado.</p>
+
+        <video class="media-player" onclick="togglePlayPause(this)">
+            <source src="./serenity.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+    
+    <div class="container_super_t"></div>
+
+    <div class="container_dark">
+        <div class="video-background">
+            <video autoplay muted loop class="background-video">
+                <source src="./sonoplastia_title.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+        <div id="title_sonoplastia">SONOPLASTIA</div>
+    </div>
+
+    <div class="container_divisoria_dark"></div>
+
+    <div class="container_dark">
+
+    </div>
+</body>
+
+</html>

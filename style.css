@@ -1,0 +1,612 @@
+/* Configurações fontes de texto */
+
+/* Color Theme Swatches in Hex */
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-1-hex {
+    color: #127369;
+}
+
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-2-hex {
+    color: #10403B;
+}
+
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-3-hex {
+    color: #8AA6A3;
+}
+
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-4-hex {
+    color: #637371;
+}
+
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-5-hex {
+    color: #BFBFBF;
+}
+
+.cal-sans-regular {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.rubik-mono-one-regular {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Links da página */
+
+a:link {
+    color: #10403B;
+    text-decoration: none;
+    font-family: "Cal Sans", sans-serif;
+}
+
+
+a:visited {
+    color: #10403B;
+    text-decoration: none;
+    font-family: "Cal Sans", sans-serif;
+}
+
+a:hover {
+    color: #BFBFBF;
+    transition: color 0.5s;
+    font-family: "Cal Sans", sans-serif;
+}
+
+/* Geralzão da página */
+
+.video-player {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #637371;
+    border-radius: 19px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    /* Indica que o vídeo é interativo */
+}
+
+.media-player {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #637371;
+    border-radius: 19px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    /* Indica que o vídeo é interativo */
+}
+
+.video-player:hover {
+    transform: scale(1.01);
+    /* Leve aumento no tamanho ao passar o mouse */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    /* Sombra mais intensa */
+}
+
+.pdf-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto; /* Centraliza o botão */
+    text-align: center;
+}
+
+.pdf-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+
+    border-radius: 19px;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+    background-color: #252525;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    margin-top: 150px;
+}
+
+.pdf-player:hover {
+    transform: scale(1.01); /* Leve aumento no tamanho ao passar o mouse */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+
+    background: linear-gradient(45deg, #ff4500, #ff8c00, #306fb8, #07121f);
+    background-size: 300% 300%;
+    /* Faz o gradiente se mover */
+    animation: fire-gradient 3s infinite;
+    /* Animação do gradiente */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#title {
+    font-family: "Roboto Mono", monospace;
+    font-size: 4vh;
+    max-width: 80%;
+    font-weight: 700;
+    margin: 0px;
+    /* - margens */
+    color: #2e2e2e;
+
+}
+
+#title2 {
+    max-width: 80%;
+    font-family: "Roboto Mono", monospace;
+    font-size: 3vh;
+    font-weight: 700;
+    margin: 0px;
+    /* - margens */
+    color: #2e2e2e;
+}
+
+#giant_title {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #BFBFBF;
+
+  font-size: 15vh;
+}
+
+#title_fire {
+    font-family: "Roboto Mono", monospace;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    color: #ffffff;
+    /* Cor do texto */
+    text-align: center;
+
+    /* Gradiente de fogo animado */
+    background-clip: content-box;
+    background: linear-gradient(45deg, #ff4500, #ff8c00, #306fb8, #07121f);
+    background-size: 300% 300%;
+    /* Faz o gradiente se mover */
+    -webkit-background-clip: text;
+    /* Aplica o gradiente apenas ao texto */
+    -webkit-text-fill-color: transparent;
+    /* Torna o fundo do texto transparente */
+    animation: fire-gradient 3s infinite;
+    /* Animação do gradiente */
+}
+
+#title_fire_dark {
+    font-family: "Roboto Mono", monospace;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    color: #ffffff;
+    /* Cor do texto */
+    text-align: center;
+
+    /* Gradiente de fogo animado */
+    background-clip: content-box;
+    background: linear-gradient(45deg, #BFBFBF, #a1a1a1, #1e1e1c, #080808);
+    background-size: 300% 300%;
+    /* Faz o gradiente se mover */
+    -webkit-background-clip: text;
+    /* Aplica o gradiente apenas ao texto */
+    -webkit-text-fill-color: transparent;
+    /* Torna o fundo do texto transparente */
+    animation: fire-gradient 3s infinite;
+    /* Animação do gradiente */
+}
+
+/* Estilo para o container do vídeo de fundo */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Certifique-se de que o vídeo está atrás do texto, mas acima de outros elementos */
+}
+
+/* Estilo para o vídeo de fundo */
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra todo o espaço */
+}
+
+#title_sonoplastia {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 15vh;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+/* Animação do gradiente */
+@keyframes fire-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#description {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    line-height: 1.5;
+    margin: 0;
+    /* - margens */
+    max-width: 80%;
+    /* - lenght*/
+
+    color: #2e2e2e;
+}
+
+.word {
+    font-family: "Roboto Mono", monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: #10403B;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+
+    min-height: 35px;
+    /* Define uma altura mínima para evitar o colapso */
+
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    /* Espaçamento entre os botões */
+    margin-top: 90px;
+}
+
+.social-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    /* Espaçamento interno */
+
+    font-family: "Cal Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #10403B;
+
+    text-decoration: none;
+
+    border: 2px solid #637371;
+    border-radius: 8px;
+
+    background-color: #ebebeb;
+    transition: all 0.3s ease;
+    /* Transição suave */
+}
+
+.social-buttons .btn:hover {
+    background-color: #181818;
+    /* Fundo cinza escuro ao passar o mouse */
+    color: #ffffff;
+    /* Texto branco ao passar o mouse */
+    border-color: #10403B;
+    /* Borda verde escura ao passar o mouse */
+}
+
+body {
+
+    background-color: #BFBFBF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    box-sizing: content-box;
+    overflow-x: hidden;
+}
+
+.geral {
+    width: 100%;
+    height: 100%;
+}
+
+.divisoria {
+    width: 700px;
+    height: 700px;
+
+    border-radius: 35px;
+    border-color: #637371;
+    border-width: 1px;
+}
+
+/* Começo do cabeçalho*/
+
+.cabecalho {
+    width: 102%;
+    height: 10vh;
+    margin-bottom: 0px;
+    margin-top: -8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #e4e4e4;
+}
+
+.cabecalho::before {
+    position: fixed;
+}
+
+.cabecalho .content {
+    width: 100%;
+}
+
+.cabecalho .curriculo {
+    font-size: 16px;
+}
+
+.cabecalho .links {
+    display: flex;
+    gap: 15%;
+    /* Espaçamento horizontal entre os links */
+    position: relative;
+    /* Necessário para o pseudo-elemento ::before */
+    margin-top: 0px;
+
+}
+
+.cabecalho .links a {
+    font-size: 16px;
+}
+
+.cabecalho .links::before {
+    /* Caixa que torna os elementos do cabeçalho alinhados */
+    content: "";
+}
+
+/* Fim do Cabeçalho */
+
+/* Container grande */
+
+.container {
+    background-color: #ebebeb;
+    width: 102%;
+    height: 900px;
+    text-align: center;
+    display: flex;
+
+    flex-direction: column;
+    /* elementos ficam empilhados */
+    align-items: center;
+    /* Centraliza horizontalmente */
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.container_divisoria {
+    background: linear-gradient(to bottom, #ebebeb, #ececec);
+
+    width: 102%;
+    height: 200px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+/* Gradiente suave na transição entre os containers */
+.container_t {
+    background: linear-gradient(to bottom, #ececec, #686767);
+
+    width: 102%;
+    height: 300px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.container_super_t {
+    background: linear-gradient(to bottom, #ececec, #080808);
+
+    width: 102%;
+    height: 1500px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.container_td {
+    background: linear-gradient(to top, #ececec, #686767);
+
+    width: 102%;
+    height: 300px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.container_dinamico {
+    background: linear-gradient(45deg, #ff4500, #ff8c00, #306fb8, #07121f);
+    background-size: 300% 300%;
+    /* Faz o gradiente se mover */
+    animation: fire-gradient 3s infinite;
+    /* Animação do gradiente */
+    width: 102%;
+    height: 900px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    /* elementos ficam empilhados */
+    align-items: center;
+    /* Centraliza horizontalmente */
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+/* Container com 2 caixas que dividem o espaço */
+
+.container_divisorio {
+    background-color: #ebebeb;
+    width: 102%;
+    /* Ajustado para 100% */
+    height: 800px;
+    text-align: center;
+
+    overflow: hidden;
+
+    display: flex;
+    /* flexbox */
+    flex-direction: row;
+    /* Elementos ficam lado a lado... haahahahahh como eu demorei pra descobrir essa cachaça */
+}
+
+/* Container (metade do divisorio) pra texto */
+
+.double-container-one {
+    background-color: #ebebeb;
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    /* flexbox */
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Centraliza o texto */
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    gap: 11px;
+    /* Espaçamento entre o título e a descrição */
+}
+
+/* Container (metade do divisorio) pra imagem */
+
+.double-container-two {
+    background-color: #ebebeb;
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    /* Para centralizar a imagem */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+
+    overflow: hidden;
+}
+
+.container_dark {
+    position: relative; /* Necessário para posicionar o vídeo corretamente */
+    background-color: #080808; /* Certifique-se de que o fundo não está cobrindo o vídeo */
+    width: 102%;
+    height: 900px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible; /* Garante que o vídeo não seja cortado */
+    z-index: 0; /* Certifique-se de que o container não cobre o vídeo */
+}
+
+.container_divisoria_dark {
+    background: #080808;
+
+    width: 102%;
+    height: 200px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
