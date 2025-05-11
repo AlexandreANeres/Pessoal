@@ -177,11 +177,29 @@ a:hover {
     color: #BFBFBF;
 }
 
+#title4 {
+    max-width: 80%;
+    font-family: "Roboto Mono", monospace;
+    font-size: 3vh;
+    font-weight: 700;
+    margin: 0px;
+    /* - margens */
+    color: #e0e0e0;
+}
+
 #giant_title {
     font-family: "Rubik Mono One", monospace;
     font-weight: 400;
     font-style: normal;
     color: #BFBFBF;
+
+    font-size: 15vh;
+}
+#giant_title2 {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #e0e0e0;
 
     font-size: 15vh;
 }
@@ -233,7 +251,32 @@ a:hover {
     /* Animação do gradiente */
 }
 
+#title_fire_dark2 {
+    max-width: 80%;
+    font-family: "Roboto Mono", monospace;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    color: #ffffff;
+    /* Cor do texto */
+    text-align: center;
+
+    /* Gradiente de fogo animado */
+    background-clip: content-box;
+    background: linear-gradient(45deg, #09213b, #a1a1a1, #1e1e1c, #83590a);
+    background-size: 400% 300%;
+    /* Faz o gradiente se mover */
+    -webkit-background-clip: text;
+    /* Aplica o gradiente apenas ao texto */
+    -webkit-text-fill-color: transparent;
+    /* Torna o fundo do texto transparente */
+    animation: fire-gradient 3s infinite;
+    /* Animação do gradiente */
+}
+
 /* Estilo para o container do vídeo de fundo */
+
 .video-background {
     position: absolute;
     top: 0;
@@ -246,6 +289,7 @@ a:hover {
 }
 
 /* Estilo para o vídeo de fundo */
+
 .background-video {
     width: 100%;
     height: 100%;
@@ -261,7 +305,19 @@ a:hover {
     position: relative;
 }
 
+#title_too_far_gone {
+
+    max-width: 80%;
+    font-family: "Rubik Mono One", monospace;
+    font-size: 20vh;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    color: #e0e0e0;
+}
+
 /* Animação do gradiente */
+
 @keyframes fire-gradient {
     0% {
         background-position: 0% 50%;
@@ -456,6 +512,7 @@ body {
 }
 
 /* Gradiente suave na transição entre os containers */
+
 .container_t {
     background: linear-gradient(to bottom, #ececec, #686767);
 
