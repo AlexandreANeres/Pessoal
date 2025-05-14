@@ -275,6 +275,30 @@ a:hover {
     /* Animação do gradiente */
 }
 
+#title_fire_black {
+    max-width: 80%;
+    font-family: "Roboto Mono", monospace;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    color: #ffffff;
+    /* Cor do texto */
+    text-align: center;
+
+    /* Gradiente de fogo animado */
+    background-clip: content-box;
+    background: linear-gradient(45deg, #b60000, #6b0606, #292929, #838383);
+    background-size: 400% 300%;
+    /* Faz o gradiente se mover */
+    -webkit-background-clip: text;
+    /* Aplica o gradiente apenas ao texto */
+    -webkit-text-fill-color: transparent;
+    /* Torna o fundo do texto transparente */
+    animation: fire-gradient 3s infinite;
+    /* Animação do gradiente */
+}
+
 /* Estilo para o container do vídeo de fundo */
 
 .video-background {
@@ -314,6 +338,17 @@ a:hover {
     text-align: center;
     position: relative;
     color: #e0e0e0;
+}
+
+#title_hell_is_north {
+
+    max-width: 80%;
+    font-family: "Rubik Mono One", monospace;
+    font-size: 20vh;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    color: #b60000;
 }
 
 /* Animação do gradiente */
@@ -551,6 +586,26 @@ body {
 
 }
 
+.container_super_t_black {
+    background: linear-gradient(to bottom, #080808, #000000);
+
+    width: 102%;
+    height: 1500px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+
 .container_td {
     background: linear-gradient(to top, #ececec, #686767);
 
@@ -671,6 +726,43 @@ body {
 
 .container_divisoria_dark {
     background: #080808;
+
+    width: 102%;
+    height: 200px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.container_black {
+    position: relative;
+    /* Necessário para posicionar o vídeo corretamente */
+    background-color: #000000;
+    /* Certifique-se de que o fundo não está cobrindo o vídeo */
+    width: 102%;
+    height: 900px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    /* Garante que o vídeo não seja cortado */
+    z-index: 0;
+    /* Certifique-se de que o container não cobre o vídeo */
+}
+
+.container_divisoria_black {
+    background: #000000;
 
     width: 102%;
     height: 200px;
